@@ -13,6 +13,10 @@ sudo apt install -y gnuplot
 Run the following to generate the images under the `figures` folder:
 
 ```bash
+# Create all figures
+make all
+
+# Create individual figures
 make figures/01-instantiation.png
 make figures/02-reinstantiation.png
 make figures/03-configuration.png
