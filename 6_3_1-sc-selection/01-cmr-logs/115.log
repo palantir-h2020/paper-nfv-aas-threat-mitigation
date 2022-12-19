@@ -1,0 +1,1012 @@
+2022-12-15 18:24:34.376  INFO 178552 --- [           main] net.i2cat.cmr.CmrApplication             : Starting CmrApplication v0.0.1-SNAPSHOT using Java 11.0.17 on maxime-portable with PID 178552 (/home/maxime/workspace/palantir/i2cat-cmr/target/cmr-0.0.1-SNAPSHOT.jar started by maxime in /home/maxime/workspace/palantir/i2cat-cmr)
+2022-12-15 18:24:34.379  INFO 178552 --- [           main] net.i2cat.cmr.CmrApplication             : No active profile set, falling back to default profiles: default
+2022-12-15 18:24:34.990  INFO 178552 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-15 18:24:35.070  INFO 178552 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 1 JPA repository interfaces.
+2022-12-15 18:24:35.551  INFO 178552 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-15 18:24:35.704  INFO 178552 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-15 18:24:35.816  INFO 178552 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-15 18:24:35.954  INFO 178552 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2022-12-15 18:24:36.158  INFO 178552 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-12-15 18:24:36.418  INFO 178552 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-12-15 18:24:37.005  INFO 178552 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-15 18:24:37.013  INFO 178552 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-15 18:24:38.065  INFO 178552 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [kafka:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-CMR-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = CMR
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+
+2022-12-15 18:24:38.322  INFO 178552 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2022-12-15 18:24:38.322  INFO 178552 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2022-12-15 18:24:38.322  INFO 178552 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1671125078320
+2022-12-15 18:24:38.325  INFO 178552 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-CMR-1, groupId=CMR] Subscribed to topic(s): cmr.requests
+2022-12-15 18:24:38.341  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available SC from the catalogue ...
+2022-12-15 18:24:38.345  INFO 178552 --- [           main] net.i2cat.cmr.CmrApplication             : Started CmrApplication in 4.502 seconds (JVM running for 5.024)
+2022-12-15 18:24:38.350  INFO 178552 --- [           main] net.i2cat.cmr.CmrApplication             : CMR init complete
+2022-12-15 18:24:38.813  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 41 registered security capabilities
+2022-12-15 18:24:38.813  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available infrastructure configurations from the orchestrator ...
+2022-12-15 18:24:38.853  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 117 registered infrastructure configurations
+2022-12-15 18:24:38.887  INFO 178552 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-CMR-1, groupId=CMR] Cluster ID: fYqh3W9eTPKdGI-x3n2SMA
+2022-12-15 18:24:38.890  INFO 178552 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-CMR-1, groupId=CMR] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2022-12-15 18:24:38.893  INFO 178552 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-CMR-1, groupId=CMR] (Re-)joining group
+2022-12-15 18:24:38.943  INFO 178552 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-CMR-1, groupId=CMR] (Re-)joining group
+2022-12-15 18:24:38.947  INFO 178552 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-CMR-1, groupId=CMR] Successfully joined group with generation Generation{generationId=135, memberId='consumer-CMR-1-4305c942-172c-413c-8fd2-2da384df2678', protocol='range'}
+2022-12-15 18:24:38.951  INFO 178552 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-CMR-1, groupId=CMR] Finished assignment for group at generation 135: {consumer-CMR-1-4305c942-172c-413c-8fd2-2da384df2678=Assignment(partitions=[cmr.requests-0])}
+2022-12-15 18:24:39.028  INFO 178552 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-CMR-1, groupId=CMR] Successfully synced group in generation Generation{generationId=135, memberId='consumer-CMR-1-4305c942-172c-413c-8fd2-2da384df2678', protocol='range'}
+2022-12-15 18:24:39.031  INFO 178552 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-CMR-1, groupId=CMR] Notifying assignor about the new Assignment(partitions=[cmr.requests-0])
+2022-12-15 18:24:39.036  INFO 178552 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-CMR-1, groupId=CMR] Adding newly assigned partitions: cmr.requests-0
+2022-12-15 18:24:39.054  INFO 178552 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-CMR-1, groupId=CMR] Setting offset for partition cmr.requests-0 to the committed offset FetchPosition{offset=901, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:9092 (id: 1 rack: null)], epoch=0}}
+2022-12-15 18:24:39.055  INFO 178552 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : CMR: partitions assigned: [cmr.requests-0]
+2022-12-15 18:24:39.175  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:24:39.176  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:24:39.192  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:24:39.231  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:24:39.231  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:24:39.409  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:24:40.386  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:24:40.405  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:24:40.409  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:24:40.426  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:24:40.427  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:24:40.446  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:24:57.017  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:24:57.026  INFO 178552 --- [ntainer#0-0-C-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [kafka:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2022-12-15 18:24:57.047  INFO 178552 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2022-12-15 18:24:57.047  INFO 178552 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2022-12-15 18:24:57.047  INFO 178552 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1671125097047
+2022-12-15 18:24:57.052  INFO 178552 --- [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: fYqh3W9eTPKdGI-x3n2SMA
+2022-12-15 18:24:57.100  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=16.433527, finalSystemCpuTime=1.83515095E10, finalUserCpuTime=1.82500004E10, initialSystemCpuTime=7.0553907E8, initialUserCpuTime=6.8E8, deltaSystemCpuTime=1.76459694E10, deltaUserCpuTime=1.75700009E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.7887539E8)
+2022-12-15 18:24:57.100  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:24:57.100  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:24:57.101  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:24:57.109  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:24:57.109  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:24:57.110  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:24:57.764  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:24:57.768  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:24:57.769  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:24:57.770  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:24:57.770  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:24:57.773  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:25:15.803  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:25:15.805  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=17.988394, finalSystemCpuTime=3.6929376E10, finalUserCpuTime=3.6820001E10, initialSystemCpuTime=1.83735951E10, initialUserCpuTime=1.82699991E10, deltaSystemCpuTime=1.85557811E10, deltaUserCpuTime=1.85500017E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8064486E8)
+2022-12-15 18:25:15.806  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:25:15.806  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:25:15.807  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:25:15.817  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:25:15.817  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:25:15.820  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:25:16.194  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:25:16.198  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:25:16.199  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:25:16.201  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:25:16.201  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:25:16.204  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:25:35.568  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:25:35.570  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=19.324232, finalSystemCpuTime=5.6532431E10, finalUserCpuTime=5.642E10, initialSystemCpuTime=3.6930388E10, initialUserCpuTime=3.6820001E10, deltaSystemCpuTime=1.96020429E10, deltaUserCpuTime=1.9599999E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8084147E8)
+2022-12-15 18:25:35.570  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:25:35.570  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:25:35.571  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:25:35.578  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:25:35.578  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:25:35.580  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:25:35.884  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:25:35.888  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:25:35.888  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:25:35.890  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:25:35.890  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:25:35.892  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:25:38.813  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available SC from the catalogue ...
+2022-12-15 18:25:38.844  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 41 registered security capabilities
+2022-12-15 18:25:38.854  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available infrastructure configurations from the orchestrator ...
+2022-12-15 18:25:38.871  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 117 registered infrastructure configurations
+2022-12-15 18:25:51.415  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:25:51.417  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=15.426158, finalSystemCpuTime=7.2214667E10, finalUserCpuTime=7.2090001E10, initialSystemCpuTime=5.6533271E10, initialUserCpuTime=5.642E10, deltaSystemCpuTime=1.56813967E10, deltaUserCpuTime=1.56700017E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8123469E8)
+2022-12-15 18:25:51.418  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:25:51.418  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:25:51.419  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:25:51.425  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:25:51.425  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:25:51.426  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:25:51.686  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:25:51.689  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:25:51.690  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:25:51.691  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:25:51.691  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:25:51.718  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:26:06.220  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:26:06.222  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=14.417246, finalSystemCpuTime=8.6889529E10, finalUserCpuTime=8.6759997E10, initialSystemCpuTime=7.2215478E10, initialUserCpuTime=7.2090001E10, deltaSystemCpuTime=1.46740511E10, deltaUserCpuTime=1.4669996E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8130022E8)
+2022-12-15 18:26:06.222  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:26:06.222  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:26:06.223  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:26:06.229  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:26:06.230  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:26:06.231  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:26:06.532  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:26:06.536  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:26:06.537  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:26:06.538  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:26:06.538  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:26:06.540  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:26:20.992  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:26:20.994  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=14.368038, finalSystemCpuTime=1.01533073E11, finalUserCpuTime=1.01409997E11, initialSystemCpuTime=8.6890226E10, initialUserCpuTime=8.677E10, deltaSystemCpuTime=1.46428477E10, deltaUserCpuTime=1.46399969E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8136576E8)
+2022-12-15 18:26:20.994  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:26:20.994  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:26:20.995  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:26:21.001  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:26:21.001  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:26:21.002  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:26:21.336  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:26:21.340  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:26:21.340  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:26:21.341  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:26:21.341  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:26:21.373  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:26:36.318  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:26:36.319  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=14.900806, finalSystemCpuTime=1.16681277E11, finalUserCpuTime=1.16550001E11, initialSystemCpuTime=1.01533852E11, initialUserCpuTime=1.01409997E11, deltaSystemCpuTime=1.51474258E10, deltaUserCpuTime=1.51400038E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8156237E8)
+2022-12-15 18:26:36.320  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:26:36.320  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:26:36.320  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:26:36.327  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:26:36.327  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:26:36.328  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:26:36.653  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:26:36.657  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:26:36.658  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:26:36.659  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:26:36.659  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:26:36.661  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:26:38.844  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available SC from the catalogue ...
+2022-12-15 18:26:38.867  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 41 registered security capabilities
+2022-12-15 18:26:38.872  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available infrastructure configurations from the orchestrator ...
+2022-12-15 18:26:38.887  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 117 registered infrastructure configurations
+2022-12-15 18:26:51.379  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:26:51.381  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=14.6449995, finalSystemCpuTime=1.31584877E11, finalUserCpuTime=1.31459998E11, initialSystemCpuTime=1.16682047E11, initialUserCpuTime=1.16550001E11, deltaSystemCpuTime=1.49028291E10, deltaUserCpuTime=1.49099971E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8208666E8)
+2022-12-15 18:26:51.381  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:26:51.381  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:26:51.382  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:26:51.388  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:26:51.388  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:26:51.389  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:26:51.678  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:26:51.682  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:26:51.683  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:26:51.685  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:26:51.685  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:26:51.687  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:27:07.871  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:27:07.873  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=16.141603, finalSystemCpuTime=1.47904315E11, finalUserCpuTime=1.47760005E11, initialSystemCpuTime=1.31585622E11, initialUserCpuTime=1.31459998E11, deltaSystemCpuTime=1.63186934E10, deltaUserCpuTime=1.63000074E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8215219E8)
+2022-12-15 18:27:07.873  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:27:07.873  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:27:07.874  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:27:07.897  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:27:07.898  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:27:07.899  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:27:08.270  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:27:08.274  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:27:08.275  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:27:08.276  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:27:08.276  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:27:08.280  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:27:24.935  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:27:24.937  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=16.605051, finalSystemCpuTime=1.64837442E11, finalUserCpuTime=1.64699996E11, initialSystemCpuTime=1.47904922E11, initialUserCpuTime=1.47760005E11, deltaSystemCpuTime=1.69325199E10, deltaUserCpuTime=1.6939991E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8221773E8)
+2022-12-15 18:27:24.937  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:27:24.937  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:27:24.938  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:27:24.945  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:27:24.945  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:27:24.946  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:27:25.295  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:27:25.299  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:27:25.299  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:27:25.300  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:27:25.300  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:27:25.302  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:27:38.867  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available SC from the catalogue ...
+2022-12-15 18:27:38.883  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 41 registered security capabilities
+2022-12-15 18:27:38.887  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available infrastructure configurations from the orchestrator ...
+2022-12-15 18:27:38.899  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 117 registered infrastructure configurations
+2022-12-15 18:27:40.008  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:27:40.010  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=14.606489, finalSystemCpuTime=1.79726254E11, finalUserCpuTime=1.79579994E11, initialSystemCpuTime=1.64838097E11, initialUserCpuTime=1.64699996E11, deltaSystemCpuTime=1.48881572E10, deltaUserCpuTime=1.4879998E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8247987E8)
+2022-12-15 18:27:40.010  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:27:40.010  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:27:40.011  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:27:40.019  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:27:40.019  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:27:40.022  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:27:40.391  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:27:40.395  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:27:40.396  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:27:40.398  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:27:40.398  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:27:40.401  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:27:56.248  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:27:56.282  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=15.802317, finalSystemCpuTime=1.95803005E11, finalUserCpuTime=1.95660005E11, initialSystemCpuTime=1.79726877E11, initialUserCpuTime=1.79579994E11, deltaSystemCpuTime=1.60761283E10, deltaUserCpuTime=1.60800113E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8247987E8)
+2022-12-15 18:27:56.282  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:27:56.282  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:27:56.283  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:27:56.297  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:27:56.298  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:27:56.302  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:27:56.714  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:27:56.718  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:27:56.718  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:27:56.719  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:27:56.719  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:27:56.721  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:28:13.427  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:28:13.429  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=16.63687, finalSystemCpuTime=2.12807451E11, finalUserCpuTime=2.1265E11, initialSystemCpuTime=1.95804201E11, initialUserCpuTime=1.95660005E11, deltaSystemCpuTime=1.70032497E10, deltaUserCpuTime=1.6989995E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8254541E8)
+2022-12-15 18:28:13.429  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:28:13.429  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:28:13.430  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:28:13.437  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:28:13.437  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:28:13.438  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:28:13.809  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:28:13.812  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:28:13.813  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:28:13.814  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:28:13.814  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:28:13.816  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:28:29.045  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:28:29.046  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=15.145312, finalSystemCpuTime=2.2821929E11, finalUserCpuTime=2.28049994E11, initialSystemCpuTime=2.12808024E11, initialUserCpuTime=2.1265E11, deltaSystemCpuTime=1.54112655E10, deltaUserCpuTime=1.53999933E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8267648E8)
+2022-12-15 18:28:29.047  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:28:29.047  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:28:29.048  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:28:29.057  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:28:29.057  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:28:29.058  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:28:29.380  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:28:29.383  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:28:29.384  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:28:29.386  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:28:29.386  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:28:29.388  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:28:38.884  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available SC from the catalogue ...
+2022-12-15 18:28:38.934  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 41 registered security capabilities
+2022-12-15 18:28:38.934  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available infrastructure configurations from the orchestrator ...
+2022-12-15 18:28:38.947  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 117 registered infrastructure configurations
+2022-12-15 18:28:47.465  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:28:47.467  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=18.034864, finalSystemCpuTime=2.4646502E11, finalUserCpuTime=2.463E11, initialSystemCpuTime=2.28220223E11, initialUserCpuTime=2.28060004E11, deltaSystemCpuTime=1.82447964E10, deltaUserCpuTime=1.82399959E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8320077E8)
+2022-12-15 18:28:47.468  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:28:47.468  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:28:47.469  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:28:47.504  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:28:47.505  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:28:47.506  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:28:47.808  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:28:47.812  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:28:47.812  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:28:47.813  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:28:47.813  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:28:47.815  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:29:03.419  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:29:03.422  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=15.56451, finalSystemCpuTime=2.62281331E11, finalUserCpuTime=2.62110003E11, initialSystemCpuTime=2.4646638E11, initialUserCpuTime=2.463E11, deltaSystemCpuTime=1.58149509E10, deltaUserCpuTime=1.58100029E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.832663E8)
+2022-12-15 18:29:03.423  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:29:03.423  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:29:03.423  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:29:03.430  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:29:03.430  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:29:03.431  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:29:03.820  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:29:03.824  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:29:03.825  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:29:03.825  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:29:03.825  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:29:03.827  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:29:18.007  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:29:18.009  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=14.084646, finalSystemCpuTime=2.76670382E11, finalUserCpuTime=2.76499988E11, initialSystemCpuTime=2.62282035E11, initialUserCpuTime=2.62110003E11, deltaSystemCpuTime=1.43883469E10, deltaUserCpuTime=1.43899853E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8339738E8)
+2022-12-15 18:29:18.009  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:29:18.009  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:29:18.010  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:29:18.016  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:29:18.016  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:29:18.017  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:29:18.352  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:29:18.356  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:29:18.356  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:29:18.357  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:29:18.357  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:29:18.359  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:29:34.167  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:29:34.169  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=15.768024, finalSystemCpuTime=2.92668572E11, finalUserCpuTime=2.92500013E11, initialSystemCpuTime=2.76671037E11, initialUserCpuTime=2.76499988E11, deltaSystemCpuTime=1.59975342E10, deltaUserCpuTime=1.60000246E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8346291E8)
+2022-12-15 18:29:34.169  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:29:34.169  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:29:34.170  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:29:34.201  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:29:34.201  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:29:34.202  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:29:34.506  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:29:34.510  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:29:34.511  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:29:34.512  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:29:34.512  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:29:34.514  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:29:38.934  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available SC from the catalogue ...
+2022-12-15 18:29:38.952  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 41 registered security capabilities
+2022-12-15 18:29:38.953  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available infrastructure configurations from the orchestrator ...
+2022-12-15 18:29:38.963  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 117 registered infrastructure configurations
+2022-12-15 18:29:39.111  INFO 178552 --- [at-thread | CMR] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-CMR-1, groupId=CMR] Member consumer-CMR-1-4305c942-172c-413c-8fd2-2da384df2678 sending LeaveGroup request to coordinator kafka:9092 (id: 2147483646 rack: null) due to consumer poll timeout has expired. This means the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time processing messages. You can address this either by increasing max.poll.interval.ms or by reducing the maximum size of batches returned in poll() with max.poll.records.
+2022-12-15 18:29:50.697  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:29:50.699  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=16.144173, finalSystemCpuTime=3.0905575E11, finalUserCpuTime=3.08880015E11, initialSystemCpuTime=2.92669358E11, initialUserCpuTime=2.92500013E11, deltaSystemCpuTime=1.63863921E10, deltaUserCpuTime=1.63800023E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8372506E8)
+2022-12-15 18:29:50.699  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:29:50.700  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:29:50.700  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:29:50.708  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:29:50.708  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:29:50.709  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:29:51.049  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:29:51.053  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:29:51.053  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:29:51.054  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:29:51.054  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:29:51.055  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:30:05.456  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:30:05.457  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=14.318944, finalSystemCpuTime=3.23632366E11, finalUserCpuTime=3.23460006E11, initialSystemCpuTime=3.09056537E11, initialUserCpuTime=3.0889001E11, deltaSystemCpuTime=1.4575829E10, deltaUserCpuTime=1.45699963E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8372506E8)
+2022-12-15 18:30:05.458  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:30:05.458  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:30:05.458  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:30:05.466  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:30:05.466  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:30:05.467  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:30:05.778  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:30:05.782  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:30:05.783  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:30:05.785  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:30:05.785  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:30:05.787  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:30:21.094  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:30:21.096  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=15.266205, finalSystemCpuTime=3.39114721E11, finalUserCpuTime=3.38940002E11, initialSystemCpuTime=3.23633218E11, initialUserCpuTime=3.23460006E11, deltaSystemCpuTime=1.54815037E10, deltaUserCpuTime=1.54799964E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8379059E8)
+2022-12-15 18:30:21.096  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:30:21.096  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:30:21.097  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:30:21.106  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:30:21.106  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:30:21.134  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:30:21.450  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:30:21.455  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:30:21.455  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:30:21.457  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:30:21.457  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:30:21.459  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:30:37.208  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:30:37.209  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=15.709998, finalSystemCpuTime=3.55090039E11, finalUserCpuTime=3.54910011E11, initialSystemCpuTime=3.39115377E11, initialUserCpuTime=3.38940002E11, deltaSystemCpuTime=1.59746621E10, deltaUserCpuTime=1.59700091E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8385613E8)
+2022-12-15 18:30:37.210  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:30:37.210  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:30:37.210  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:30:37.216  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:30:37.217  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:30:37.218  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:30:37.593  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:30:37.596  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:30:37.597  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:30:37.598  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:30:37.599  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:30:37.601  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:30:38.953  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available SC from the catalogue ...
+2022-12-15 18:30:38.970  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 41 registered security capabilities
+2022-12-15 18:30:38.970  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available infrastructure configurations from the orchestrator ...
+2022-12-15 18:30:38.982  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 117 registered infrastructure configurations
+2022-12-15 18:30:58.700  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:30:58.701  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=21.049355, finalSystemCpuTime=3.76370233E11, finalUserCpuTime=3.76190009E11, initialSystemCpuTime=3.55090629E11, initialUserCpuTime=3.54910011E11, deltaSystemCpuTime=2.12796047E10, deltaUserCpuTime=2.1279998E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8424934E8)
+2022-12-15 18:30:58.701  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:30:58.702  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:30:58.702  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:30:58.706  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:30:58.706  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:30:58.707  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:30:59.065  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:30:59.069  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:30:59.069  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:30:59.070  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:30:59.070  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:30:59.071  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:31:13.073  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:31:13.075  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=13.91273, finalSystemCpuTime=3.90547767E11, finalUserCpuTime=3.90360007E11, initialSystemCpuTime=3.76370921E11, initialUserCpuTime=3.76190009E11, deltaSystemCpuTime=1.41768458E10, deltaUserCpuTime=1.41699973E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8431488E8)
+2022-12-15 18:31:13.075  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:31:13.075  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:31:13.076  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:31:13.078  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:31:13.078  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:31:13.079  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:31:13.373  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:31:13.377  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:31:13.378  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:31:13.378  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:31:13.378  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:31:13.380  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:31:27.197  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:31:27.198  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=13.774612, finalSystemCpuTime=4.04523385E11, finalUserCpuTime=4.04329988E11, initialSystemCpuTime=3.90548292E11, initialUserCpuTime=3.90360007E11, deltaSystemCpuTime=1.39750932E10, deltaUserCpuTime=1.39699814E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8438042E8)
+2022-12-15 18:31:27.198  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:31:27.198  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:31:27.199  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:31:27.227  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:31:27.227  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:31:27.228  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:31:27.538  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:31:27.542  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:31:27.542  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:31:27.543  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:31:27.543  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:31:27.545  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:31:38.970  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available SC from the catalogue ...
+2022-12-15 18:31:38.982  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 41 registered security capabilities
+2022-12-15 18:31:38.982  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available infrastructure configurations from the orchestrator ...
+2022-12-15 18:31:38.991  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 117 registered infrastructure configurations
+2022-12-15 18:31:42.395  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:31:42.396  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=14.812761, finalSystemCpuTime=4.19589521E11, finalUserCpuTime=4.19399991E11, initialSystemCpuTime=4.04523876E11, initialUserCpuTime=4.04329988E11, deltaSystemCpuTime=1.50656451E10, deltaUserCpuTime=1.50700032E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8457702E8)
+2022-12-15 18:31:42.396  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:31:42.396  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:31:42.397  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:31:42.400  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:31:42.400  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:31:42.401  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:31:42.797  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:31:42.801  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:31:42.801  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:31:42.802  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:31:42.802  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:31:42.804  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:31:57.524  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:31:57.525  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=14.678911, finalSystemCpuTime=4.34555388E11, finalUserCpuTime=4.34359992E11, initialSystemCpuTime=4.19590013E11, initialUserCpuTime=4.19399991E11, deltaSystemCpuTime=1.4965375E10, deltaUserCpuTime=1.4960001E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8457702E8)
+2022-12-15 18:31:57.525  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:31:57.525  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:31:57.526  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:31:57.529  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:31:57.530  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:31:57.531  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:31:57.871  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:31:57.874  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:31:57.875  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:31:57.875  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:31:57.875  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:31:57.876  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:32:10.911  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:32:10.913  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=12.94699, finalSystemCpuTime=4.47771607E11, finalUserCpuTime=4.47569986E11, initialSystemCpuTime=4.34555879E11, initialUserCpuTime=4.34359992E11, deltaSystemCpuTime=1.32157276E10, deltaUserCpuTime=1.32099932E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8457702E8)
+2022-12-15 18:32:10.913  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:32:10.913  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:32:10.914  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:32:10.916  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:32:10.916  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:32:10.917  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:32:11.228  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:32:11.232  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:32:11.232  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:32:11.233  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:32:11.233  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:32:11.235  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:32:25.145  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:32:25.146  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=13.868392, finalSystemCpuTime=4.61847134E11, finalUserCpuTime=4.61650002E11, initialSystemCpuTime=4.4777223E11, initialUserCpuTime=4.47569986E11, deltaSystemCpuTime=1.40749046E10, deltaUserCpuTime=1.40800164E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.847081E8)
+2022-12-15 18:32:25.146  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:32:25.146  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:32:25.147  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:32:25.149  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:32:25.149  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:32:25.176  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:32:25.496  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:32:25.500  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:32:25.500  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:32:25.501  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:32:25.501  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:32:25.503  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:32:38.982  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available SC from the catalogue ...
+2022-12-15 18:32:38.993  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 41 registered security capabilities
+2022-12-15 18:32:38.993  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available infrastructure configurations from the orchestrator ...
+2022-12-15 18:32:39.001  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 117 registered infrastructure configurations
+2022-12-15 18:32:40.180  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:32:40.182  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=14.638605, finalSystemCpuTime=4.76751725E11, finalUserCpuTime=4.76550005E11, initialSystemCpuTime=4.6184779E11, initialUserCpuTime=4.61650002E11, deltaSystemCpuTime=1.4903935E10, deltaUserCpuTime=1.49000028E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8477363E8)
+2022-12-15 18:32:40.182  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:32:40.182  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:32:40.182  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:32:40.185  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:32:40.186  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:32:40.187  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:32:40.521  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:32:40.525  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:32:40.525  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:32:40.526  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:32:40.526  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:32:40.527  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:32:53.592  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:32:53.593  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=12.986543, finalSystemCpuTime=4.89991307E11, finalUserCpuTime=4.89790013E11, initialSystemCpuTime=4.76752314E11, initialUserCpuTime=4.76550005E11, deltaSystemCpuTime=1.32389929E10, deltaUserCpuTime=1.32400087E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8477363E8)
+2022-12-15 18:32:53.594  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:32:53.594  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:32:53.594  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:32:53.597  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:32:53.597  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:32:53.598  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:32:53.915  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:32:53.919  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:32:53.920  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:32:53.921  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:32:53.921  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:32:53.923  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:33:07.600  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:33:07.601  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=13.635357, finalSystemCpuTime=5.03850598E11, finalUserCpuTime=5.03649993E11, initialSystemCpuTime=4.89991897E11, initialUserCpuTime=4.89790013E11, deltaSystemCpuTime=1.38587013E10, deltaUserCpuTime=1.38599793E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8483917E8)
+2022-12-15 18:33:07.601  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:33:07.601  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:33:07.602  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:33:07.628  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:33:07.628  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:33:07.629  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:33:07.929  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:33:07.936  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:33:07.937  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:33:07.938  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:33:07.938  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:33:07.941  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:33:25.311  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:33:25.312  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=17.302137, finalSystemCpuTime=5.21399992E11, finalUserCpuTime=5.21179988E11, initialSystemCpuTime=5.03851155E11, initialUserCpuTime=5.03649993E11, deltaSystemCpuTime=1.75488369E10, deltaUserCpuTime=1.75299953E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.849047E8)
+2022-12-15 18:33:25.312  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:33:25.312  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:33:25.313  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:33:25.317  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:33:25.317  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:33:25.319  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:33:25.802  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:33:25.806  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:33:25.807  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:33:25.807  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:33:25.807  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:33:25.809  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:33:38.994  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available SC from the catalogue ...
+2022-12-15 18:33:39.006  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 41 registered security capabilities
+2022-12-15 18:33:39.006  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available infrastructure configurations from the orchestrator ...
+2022-12-15 18:33:39.021  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 117 registered infrastructure configurations
+2022-12-15 18:33:47.104  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:33:47.105  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=21.160715, finalSystemCpuTime=5.42885315E11, finalUserCpuTime=5.42669996E11, initialSystemCpuTime=5.21400517E11, initialUserCpuTime=5.21179988E11, deltaSystemCpuTime=2.1484798E10, deltaUserCpuTime=2.14900081E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8510131E8)
+2022-12-15 18:33:47.105  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:33:47.105  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:33:47.106  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:33:47.109  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:33:47.109  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:33:47.110  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:33:47.482  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:33:47.487  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:33:47.488  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:33:47.489  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:33:47.489  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:33:47.491  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:34:10.418  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:34:10.418  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=22.877121, finalSystemCpuTime=5.6598836E11, finalUserCpuTime=5.6576999E11, initialSystemCpuTime=5.42885839E11, initialUserCpuTime=5.42669996E11, deltaSystemCpuTime=2.31025213E10, deltaUserCpuTime=2.30999982E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8510131E8)
+2022-12-15 18:34:10.419  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:34:10.419  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:34:10.419  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:34:10.454  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:34:10.454  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:34:10.455  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:34:10.823  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:34:10.828  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:34:10.829  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:34:10.830  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:34:10.830  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:34:10.831  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:34:39.006  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available SC from the catalogue ...
+2022-12-15 18:34:39.020  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 41 registered security capabilities
+2022-12-15 18:34:39.021  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available infrastructure configurations from the orchestrator ...
+2022-12-15 18:34:39.033  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 117 registered infrastructure configurations
+2022-12-15 18:34:41.872  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:34:41.874  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=30.99401, finalSystemCpuTime=5.9714241E11, finalUserCpuTime=5.9691998E11, initialSystemCpuTime=5.6598882E11, initialUserCpuTime=5.6576999E11, deltaSystemCpuTime=3.11535862E10, deltaUserCpuTime=3.11499817E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8523238E8)
+2022-12-15 18:34:41.874  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:34:41.874  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:34:41.875  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:34:41.879  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:34:41.879  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:34:41.881  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:34:42.370  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:34:42.374  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:34:42.375  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:34:42.376  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:34:42.376  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:34:42.378  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:35:09.073  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:35:09.074  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=26.570482, finalSystemCpuTime=6.2396275E11, finalUserCpuTime=6.2370998E11, initialSystemCpuTime=5.9714319E11, initialUserCpuTime=5.9691998E11, deltaSystemCpuTime=2.68195594E10, deltaUserCpuTime=2.67900027E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8523238E8)
+2022-12-15 18:35:09.075  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:35:09.075  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:35:09.075  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:35:09.078  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:35:09.078  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:35:09.080  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:35:09.453  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:35:09.458  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:35:09.458  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:35:09.460  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:35:09.460  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:35:09.462  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:35:30.936  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:35:30.937  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=21.428537, finalSystemCpuTime=6.456148E11, finalUserCpuTime=6.4537002E11, initialSystemCpuTime=6.2396354E11, initialUserCpuTime=6.2370998E11, deltaSystemCpuTime=2.16512594E10, deltaUserCpuTime=2.16600412E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8529792E8)
+2022-12-15 18:35:30.938  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:35:30.938  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:35:30.938  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:35:30.941  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:35:30.941  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:35:30.973  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:35:31.330  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:35:31.336  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:35:31.338  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:35:31.339  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:35:31.339  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:35:31.342  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:35:39.020  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available SC from the catalogue ...
+2022-12-15 18:35:39.033  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 41 registered security capabilities
+2022-12-15 18:35:39.034  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available infrastructure configurations from the orchestrator ...
+2022-12-15 18:35:39.043  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 117 registered infrastructure configurations
+2022-12-15 18:35:53.593  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:35:53.594  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=22.208542, finalSystemCpuTime=6.6808925E11, finalUserCpuTime=6.6784002E11, initialSystemCpuTime=6.4561532E11, initialUserCpuTime=6.4537002E11, deltaSystemCpuTime=2.24739328E10, deltaUserCpuTime=2.24700006E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.856256E8)
+2022-12-15 18:35:53.594  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:35:53.594  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:35:53.595  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:35:53.598  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:35:53.598  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:35:53.599  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:35:53.987  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:35:53.991  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:35:53.992  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:35:53.992  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:35:53.992  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:35:53.994  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:36:14.688  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:36:14.689  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=20.598125, finalSystemCpuTime=6.8895552E11, finalUserCpuTime=6.887E11, initialSystemCpuTime=6.6808984E11, initialUserCpuTime=6.6784002E11, deltaSystemCpuTime=2.08656794E10, deltaUserCpuTime=2.08599777E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.856256E8)
+2022-12-15 18:36:14.690  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:36:14.690  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:36:14.690  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:36:14.694  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:36:14.694  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:36:14.697  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:36:15.075  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:36:15.079  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:36:15.080  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:36:15.081  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:36:15.081  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:36:15.082  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:36:37.646  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:36:37.647  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=22.513464, finalSystemCpuTime=7.1169029E11, finalUserCpuTime=7.1142998E11, initialSystemCpuTime=6.8895631E11, initialUserCpuTime=6.887E11, deltaSystemCpuTime=2.27339796E10, deltaUserCpuTime=2.2729982E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.856256E8)
+2022-12-15 18:36:37.648  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:36:37.648  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:36:37.648  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:36:37.680  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:36:37.680  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:36:37.682  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:36:38.159  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:36:38.163  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:36:38.164  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:36:38.165  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:36:38.165  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:36:38.167  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:36:39.034  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available SC from the catalogue ...
+2022-12-15 18:36:39.048  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 41 registered security capabilities
+2022-12-15 18:36:39.048  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available infrastructure configurations from the orchestrator ...
+2022-12-15 18:36:39.058  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 117 registered infrastructure configurations
+2022-12-15 18:37:01.104  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:37:01.105  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=22.88811, finalSystemCpuTime=7.3495013E11, finalUserCpuTime=7.3469002E11, initialSystemCpuTime=7.1169101E11, initialUserCpuTime=7.1142998E11, deltaSystemCpuTime=2.32591196E10, deltaUserCpuTime=2.32600371E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8575667E8)
+2022-12-15 18:37:01.105  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:37:01.105  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:37:01.106  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:37:01.109  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:37:01.109  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:37:01.111  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:37:01.541  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:37:01.546  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:37:01.546  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:37:01.547  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:37:01.547  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:37:01.549  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:37:22.744  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:37:22.745  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=21.083206, finalSystemCpuTime=7.5631021E11, finalUserCpuTime=7.5604001E11, initialSystemCpuTime=7.3495079E11, initialUserCpuTime=7.3469002E11, deltaSystemCpuTime=2.13594276E10, deltaUserCpuTime=2.13499904E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8575667E8)
+2022-12-15 18:37:22.745  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:37:22.745  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:37:22.746  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:37:22.749  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:37:22.749  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:37:22.750  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:37:23.139  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:37:23.143  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:37:23.143  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:37:23.144  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:37:23.144  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:37:23.146  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:37:39.048  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available SC from the catalogue ...
+2022-12-15 18:37:39.062  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 41 registered security capabilities
+2022-12-15 18:37:39.062  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available infrastructure configurations from the orchestrator ...
+2022-12-15 18:37:39.076  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 117 registered infrastructure configurations
+2022-12-15 18:37:44.431  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:37:44.432  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=21.236687, finalSystemCpuTime=7.7776617E11, finalUserCpuTime=7.7749997E11, initialSystemCpuTime=7.563108E11, initialUserCpuTime=7.5604001E11, deltaSystemCpuTime=2.14553723E10, deltaUserCpuTime=2.14599598E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8595328E8)
+2022-12-15 18:37:44.432  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:37:44.432  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:37:44.433  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:37:44.468  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:37:44.469  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:37:44.469  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:37:44.836  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:37:44.841  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:37:44.841  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:37:44.843  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:37:44.843  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:37:44.845  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:38:07.037  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:38:07.038  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=22.150457, finalSystemCpuTime=8.0019797E11, finalUserCpuTime=7.9992999E11, initialSystemCpuTime=7.777667E11, initialUserCpuTime=7.7749997E11, deltaSystemCpuTime=2.24312689E10, deltaUserCpuTime=2.24300237E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8595328E8)
+2022-12-15 18:38:07.038  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:38:07.038  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:38:07.039  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:38:07.042  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:38:07.042  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:38:07.043  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:38:07.466  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:38:07.469  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:38:07.470  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:38:07.470  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:38:07.470  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:38:07.472  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:38:27.485  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:38:27.487  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=19.914145, finalSystemCpuTime=8.2041458E11, finalUserCpuTime=8.2013998E11, initialSystemCpuTime=8.0019843E11, initialUserCpuTime=7.9992999E11, deltaSystemCpuTime=2.02161521E10, deltaUserCpuTime=2.02099917E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8595328E8)
+2022-12-15 18:38:27.488  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:38:27.488  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:38:27.489  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:38:27.492  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:38:27.492  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:38:27.493  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:38:27.864  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:38:27.868  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:38:27.868  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:38:27.869  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:38:27.869  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:38:27.871  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:38:39.062  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available SC from the catalogue ...
+2022-12-15 18:38:39.072  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 41 registered security capabilities
+2022-12-15 18:38:39.076  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available infrastructure configurations from the orchestrator ...
+2022-12-15 18:38:39.086  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 117 registered infrastructure configurations
+2022-12-15 18:38:51.817  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:38:51.818  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=23.89955, finalSystemCpuTime=8.4453537E11, finalUserCpuTime=8.4425998E11, initialSystemCpuTime=8.2041595E11, initialUserCpuTime=8.2013998E11, deltaSystemCpuTime=2.41194107E10, deltaUserCpuTime=2.41200005E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8601882E8)
+2022-12-15 18:38:51.819  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:38:51.819  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:38:51.819  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:38:51.856  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:38:51.856  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:38:51.857  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:38:52.223  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:38:52.227  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:38:52.228  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:38:52.229  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:38:52.229  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:38:52.231  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:39:20.372  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:39:20.373  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=28.098824, finalSystemCpuTime=8.7286553E11, finalUserCpuTime=8.7259002E11, initialSystemCpuTime=8.4453582E11, initialUserCpuTime=8.4425998E11, deltaSystemCpuTime=2.83297055E10, deltaUserCpuTime=2.83300332E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8608435E8)
+2022-12-15 18:39:20.374  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:39:20.374  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:39:20.375  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:39:20.379  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:39:20.379  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:39:20.381  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:39:20.895  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:39:20.899  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:39:20.900  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:39:20.901  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:39:20.901  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:39:20.903  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:39:39.073  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available SC from the catalogue ...
+2022-12-15 18:39:39.087  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 41 registered security capabilities
+2022-12-15 18:39:39.088  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  : Retrieving the list of available infrastructure configurations from the orchestrator ...
+2022-12-15 18:39:39.101  INFO 178552 --- [   scheduling-1] n.i.c.o.PalantirInfrastructureConnector  :  ... done : read 117 registered infrastructure configurations
+2022-12-15 18:39:48.918  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:39:48.919  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=27.892366, finalSystemCpuTime=9.0103769E11, finalUserCpuTime=9.0074998E11, initialSystemCpuTime=8.7286645E11, initialUserCpuTime=8.7259002E11, deltaSystemCpuTime=2.81712394E10, deltaUserCpuTime=2.81599672E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8614989E8)
+2022-12-15 18:39:48.920  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:39:48.920  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:39:48.921  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:39:48.926  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:39:48.926  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:39:48.928  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:39:49.409  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:39:49.416  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:39:49.416  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:39:49.417  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:39:49.417  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:39:49.419  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
+2022-12-15 18:40:18.833  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] A deployment solution was found.
+2022-12-15 18:40:18.834  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : Benchmark: 
+BenchmarkContext(numberOfDeploymentConfigurations=4600, infrastructureCount=115, solvingDurationProcess=29.36108, finalSystemCpuTime=9.306673E11, finalUserCpuTime=9.3037999E11, initialSystemCpuTime=9.0103847E11, initialUserCpuTime=9.0074998E11, deltaSystemCpuTime=2.96288256E10, deltaUserCpuTime=2.96300052E10, totalExecutionDuration=0.0, threadMemoryConsumption=5.8614989E8)
+2022-12-15 18:40:18.834  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Parsing an incoming request
+2022-12-15 18:40:18.835  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.Router                     : [43] Requesting a deployment solving
+2022-12-15 18:40:18.835  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Retrieved billingPeriod=1000,000000 , 0 explicitly requested sec. mechanism(s) for deployment and 1 requested sec. feature(s).
+2022-12-15 18:40:18.869  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Found 4600 possible deployment configuration(s)
+2022-12-15 18:40:18.869  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Preparing Solver environment
+2022-12-15 18:40:18.870  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Infra constraints
+2022-12-15 18:40:19.292  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Unicity constraints
+2022-12-15 18:40:19.297  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring Security Features constraints
+2022-12-15 18:40:19.298  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] 8 security mechanism(s) satisfy the requirements (detectionMethod|mitigationMethod)=network_flow_monitoring
+2022-12-15 18:40:19.299  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring explicitly asked SC constraints
+2022-12-15 18:40:19.299  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Configuring cost function
+2022-12-15 18:40:19.300  INFO 178552 --- [ntainer#0-0-C-1] net.i2cat.cmr.solving.CspSolver          : [43] Solving ...
