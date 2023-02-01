@@ -14,4 +14,4 @@ set xtics nomirror scale 0
 set ytics nomirror
 set ylabel "Duration of solver execution (s)"
 set xtics ('5' 1,'15' 2, '25' 3,'35' 4,'45' 5,'55' 6,'65' 7,'75' 8,'85' 9,'95' 10,'105' 11,'115' 12,'125' 13)
-plot for [i=1:13] 'solving-solveronly.csv' using (i):i notitle
+plot for [i=1:13] 'solving-solveronly.csv' using (i):i notitle lc 3
